@@ -1,0 +1,122 @@
+/* Chat Container */
+.chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Messages */
+.messages {
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #3a3b58;
+    transition: background-color 0.3s;
+}
+
+.message strong {
+    color: #3a3b58;
+}
+
+.message:hover {
+    background-color: #f1f1f1;
+}
+
+/* Differentiate users */
+.message.current-user {
+    background-color: #e0f7fa; /* Light cyan for current user */
+    text-align: right;
+}
+
+.message.other-user {
+    background-color: #fce4ec; /* Light pink for other users */
+    text-align: left;
+}
+
+/* Chat Input */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f9f9f9;
+    align-items: center;
+}
+
+.upload-button {
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #3a3b58;
+    transition: color 0.3s;
+}
+
+.upload-button:hover {
+    color: #ffdd57;
+}
+
+.emoji-button {
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #3a3b58;
+    transition: color 0.3s;
+}
+
+.emoji-button:hover {
+    color: #ffdd57;
+}
+
+.chat-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: border-color 0.3s;
+}
+
+.chat-input input[type="text"]:focus {
+    border-color: #3a3b58;
+    outline: none;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3b58;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #5a5b78;
+}
+
+/* Emoji Picker */
+.emoji-picker {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Images in messages */
+.message img {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 5px; /* Optional: add some rounding to the corners */
+}
